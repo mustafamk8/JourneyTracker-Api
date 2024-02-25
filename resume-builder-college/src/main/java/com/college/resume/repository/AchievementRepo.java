@@ -9,7 +9,6 @@ import com.college.resume.entity.Career;
 import com.college.resume.entity.StudentPersonel;
 
 public interface AchievementRepo extends JpaRepository<Achievement, Integer> {
-
 	
 	List<Achievement> findByScholarNo(StudentPersonel student);
 	

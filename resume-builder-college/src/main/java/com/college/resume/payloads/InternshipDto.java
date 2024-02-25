@@ -1,39 +1,28 @@
-package com.college.resume.entity;
+package com.college.resume.payloads;
 
 import java.util.Date;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 
-@Entity
-public class Internship {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+public class InternshipDto {
+
 	private Integer id;
-	
-	@ManyToOne
-	private StudentPersonel scholarNo;
+	private StudentPersonelDto scholarNo;
 	private String trName;
 	private String orgName;
 	private Date trStartDate;
 	private Date trEndDate;
 	private String certiUrl;
 	private String description;
-	
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public StudentPersonel getScholarNo() {
+	public StudentPersonelDto getScholarNo() {
 		return scholarNo;
 	}
-	public void setScholarNo(StudentPersonel scholarNo) {
+	public void setScholarNo(StudentPersonelDto scholarNo) {
 		this.scholarNo = scholarNo;
 	}
 	public String getTrName() {
@@ -72,10 +61,9 @@ public class Internship {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Internship() {
+	public InternshipDto() {
 		// TODO Auto-generated constructor stub
 	}
-	
 	
 	
 
