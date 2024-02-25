@@ -1,12 +1,11 @@
 package com.college.resume.payloads;
 
-import com.college.resume.entity.StudentPersonel;
 
 
 public class CareerDto {
 
 	private Integer id;
-	private StudentPersonel scholarNo;
+	private StudentPersonelDto scholarNo;
 	private String objective;
 	private String strength1;
 	private String strength2;
@@ -20,10 +19,10 @@ public class CareerDto {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public StudentPersonel getScholarNo() {
+	public StudentPersonelDto getScholarNo() {
 		return scholarNo;
 	}
-	public void setScholarNo(StudentPersonel scholarNo) {
+	public void setScholarNo(StudentPersonelDto scholarNo) {
 		this.scholarNo = scholarNo;
 	}
 	public String getObjective() {

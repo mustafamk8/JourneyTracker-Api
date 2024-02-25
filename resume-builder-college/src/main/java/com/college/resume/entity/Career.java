@@ -1,5 +1,7 @@
 package com.college.resume.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,6 +15,7 @@ public class Career {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	
+	@JsonIgnore
 	@OneToOne
 	private StudentPersonel scholarNo;
 	private String objective;

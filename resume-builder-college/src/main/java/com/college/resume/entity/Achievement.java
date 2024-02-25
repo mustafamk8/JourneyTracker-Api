@@ -17,7 +17,26 @@ public class Achievement {
 	@ManyToOne
 	private StudentPersonel scholarNo;
 	private String achieve;
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public StudentPersonel getScholarNo() {
+		return scholarNo;
+	}
+	public void setScholarNo(StudentPersonel scholarNo) {
+		this.scholarNo = scholarNo;
+	}
+	public String getAchieve() {
+		return achieve;
+	}
+	public void setAchieve(String achieve) {
+		this.achieve = achieve;
+	}
 
+	
 	
 	
 }
