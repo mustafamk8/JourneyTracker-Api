@@ -1,20 +1,11 @@
-package com.college.resume.entity;
+package com.college.resume.payloads;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 
-@Entity
-public class Project {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+
+public class ProjectDto {
+
 	private Integer id;
-	
-	@ManyToOne
-	private StudentPersonel scholarNo;
+	private StudentPersonelDto scholarNo;
 	private String projectName;
 	private String projectDesc;
 	private String role;
@@ -26,10 +17,10 @@ public class Project {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public StudentPersonel getScholarNo() {
+	public StudentPersonelDto getScholarNo() {
 		return scholarNo;
 	}
-	public void setScholarNo(StudentPersonel scholarNo) {
+	public void setScholarNo(StudentPersonelDto scholarNo) {
 		this.scholarNo = scholarNo;
 	}
 	public String getProjectName() {
@@ -62,7 +53,7 @@ public class Project {
 	public void setProjectLink(String projectLink) {
 		this.projectLink = projectLink;
 	}
-	public Project() {
+	public ProjectDto() {
 		// TODO Auto-generated constructor stub
 	}
 	
