@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 
@@ -53,6 +54,11 @@ public class StudentPersonel {
     private String studentEnrollmentNo;
     
     private String studentPhoto;
+    
+    private String photoType;
+    
+    @Lob
+    private byte[] photoData;
     
     private String studentCategory;
     
@@ -127,6 +133,23 @@ public class StudentPersonel {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	
+	public String getPhotoType() {
+		return photoType;
+	}
+
+	public void setPhotoType(String photoType) {
+		this.photoType = photoType;
+	}
+
+	public byte[] getPhotoData() {
+		return photoData;
+	}
+
+	public void setPhotoData(byte[] photoData) {
+		this.photoData = photoData;
 	}
 
 	public String getStudentDept() {

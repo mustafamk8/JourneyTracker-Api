@@ -1,46 +1,48 @@
 package com.college.resume.payloads;
 
-
-
 public class StudentPersonelDto {
-	
+
 	private Integer id;
-	
+
 	private String scholarNo;
-	
-    private String studentName;
-   
-    private String studentPassword;
-    
-    private String gender;
-    
-    private String studentDept;
-    
-    private Integer studentSemester;
-    
-    private Integer studentSection;
-    
-    private String studentCollegeEmail;
-    
-    private String studentPersonalEmail;
-    
-    private String studentGithub;
-    
-    private String studentLinkedin;
-    
-    private String studentAddress;
-    
-    private String studentPhone;
-    
-    private String studentEnrollmentNo;
-    
-    private String studentPhoto;
-    
-    private String studentCategory;
-    
-    private Integer admissonYear;
-    
-    private String Dob;
+
+	private String studentName;
+
+	private String studentPassword;
+
+	private String gender;
+
+	private String studentDept;
+
+	private Integer studentSemester;
+
+	private Integer studentSection;
+
+	private String studentCollegeEmail;
+
+	private String studentPersonalEmail;
+
+	private String studentGithub;
+
+	private String studentLinkedin;
+
+	private String studentAddress;
+
+	private String studentPhone;
+
+	private String studentEnrollmentNo;
+
+	private String studentPhoto;
+
+	private String studentCategory;
+
+	private Integer admissonYear;
+
+	private String Dob;
+
+	private String photoType;
+
+	private byte[] photoData;
 
 	public StudentPersonelDto() {
 		// TODO Auto-generated constructor stub
@@ -197,8 +199,23 @@ public class StudentPersonelDto {
 	public void setDob(String dob) {
 		Dob = dob;
 	}
-    
+
+	public String getPhotoType() {
+		return photoType;
+	}
+
+	public void setPhotoType(String photoType) {
+		this.photoType = photoType;
+	}
+
+	public byte[] getPhotoData() {
+		return photoData;
+	}
+
+	public void setPhotoData(byte[] photoData) {
+		this.photoData = photoData;
+	}
 	
-    
+	
 
 }

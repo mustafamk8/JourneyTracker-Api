@@ -1,12 +1,14 @@
 package com.college.resume.service.impl;
 
 
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.college.resume.entity.StudentPersonel;
 import com.college.resume.exception.ResourceNotFoundException;
@@ -68,6 +70,27 @@ public class StudentPersonelServiceImpl implements StudentPersonelService {
 		StudentPersonel st = this.studentPersonelRepo.findById(scholarNo).orElseThrow(()->new ResourceNotFoundException("StudentPersonel", "Id", scholarNo));
 		this.studentPersonelRepo.delete(st);
 
+	}
+	
+
+	@Override
+	public StudentPersonelDto updateImage(String scholarNo, MultipartFile file) {
+		// TODO Auto-generated method stub
+		StudentPersonel st = this.studentPersonelRepo.findById(scholarNo).orElseThrow(()->new ResourceNotFoundException("StudentPersonel", "Id", scholarNo));
+		st.setStudentPhoto(file.getOriginalFilename());
+		st.setPhotoType(file.getContentType());
+		try {
+			st.setPhotoData(file.getBytes());
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		
+	
+		StudentPersonel savedImage = this.studentPersonelRepo.save(st);
+		
+		return this.studentToDto(savedImage);
 	}
 
 	public StudentPersonel dtoToStudent(StudentPersonelDto studentPersonelDto) {
