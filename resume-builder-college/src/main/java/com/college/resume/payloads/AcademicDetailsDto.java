@@ -1,36 +1,25 @@
-package com.college.resume.entity;
+package com.college.resume.payloads;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+public class AcademicDetailsDto {
 
-@Entity
-public class AcademicDetails {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	
-	@OneToOne
-	private StudentPersonel scholarNo;
-	
+
+	private StudentPersonelDto scholarNo;
+
 	private String tenthSchoolName;
-	
+
 	private String tenthBoard;
-	
+
 	private Double tenthNumber;
-	
+
 	private String twelfthSchoolName;
-	
+
 	private String twelfthBoard;
-	
+
 	private Double twelfthNumber;
-	
+
 	private String collegeBacklog;
-	
+
 	private Double collegeCgpa;
 
 	public Integer getId() {
@@ -41,11 +30,11 @@ public class AcademicDetails {
 		this.id = id;
 	}
 
-	public StudentPersonel getScholarNo() {
+	public StudentPersonelDto getScholarNo() {
 		return scholarNo;
 	}
 
-	public void setScholarNo(StudentPersonel scholarNo) {
+	public void setScholarNo(StudentPersonelDto scholarNo) {
 		this.scholarNo = scholarNo;
 	}
 
@@ -113,17 +102,10 @@ public class AcademicDetails {
 		this.collegeCgpa = collegeCgpa;
 	}
 
-	public AcademicDetails() {
+	public AcademicDetailsDto() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
