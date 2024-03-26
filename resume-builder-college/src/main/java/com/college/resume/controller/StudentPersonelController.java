@@ -60,6 +60,4 @@ public class StudentPersonelController {
        return  ResponseEntity.ok(st);
     }
 	
-	
-
 }
